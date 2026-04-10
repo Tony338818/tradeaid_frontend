@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import "../login_page.css";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -59,7 +58,7 @@ export default function LoginPage() {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ phone_number: `+${phone}` }),
+          body: JSON.stringify({ phone_number: `${phone}` }),
         },
       );
 
@@ -103,7 +102,7 @@ export default function LoginPage() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            phone_number: `+${phone}`,
+            phone_number: `${phone}`,
             otp_code: otp,
           }),
         },
@@ -151,7 +150,7 @@ export default function LoginPage() {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ phone_number: `+${phone}` }),
+          body: JSON.stringify({ phone_number: `${phone}` }),
         },
       );
 
@@ -208,7 +207,7 @@ export default function LoginPage() {
           </div>
 
           <div className="login-content">
-            <h2>Manage Your Inventory</h2>
+            <h2>Manage Your Store</h2>
             <h3>With Ease</h3>
             <p>
               Track sales, manage inventory, and reorder stock by simply

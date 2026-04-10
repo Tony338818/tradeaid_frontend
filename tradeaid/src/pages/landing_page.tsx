@@ -132,7 +132,7 @@ export default function LandingPage() {
           <div className="hero-left">
             <div className="hero-badge">
               <span className="badge-icon">✨</span>
-              <span>AI-Powered Inventory Management</span>
+              <span>AI-Powered Business Assistant</span>
             </div>
 
             <h1 className="hero-title">
