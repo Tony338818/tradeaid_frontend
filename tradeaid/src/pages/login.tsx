@@ -24,19 +24,19 @@ export default function LoginPage() {
   const [canResend, setCanResend] = useState(false);
 
   // Format phone number
-  const formatPhoneNumber = (value: string) => {
-    const cleaned = value.replace(/\D/g, "");
-    if (cleaned.length <= 3) return cleaned;
-    if (cleaned.length <= 7)
-      return `${cleaned.slice(0, 3)} ${cleaned.slice(3)}`;
-    return `${cleaned.slice(0, 3)} ${cleaned.slice(3, 7)} ${cleaned.slice(7, 11)}`;
-  };
+  // const formatPhoneNumber = (value: string) => {
+  //   const cleaned = value.replace(/\D/g, "");
+  //   if (cleaned.length <= 3) return cleaned;
+  //   if (cleaned.length <= 7)
+  //     return `${cleaned.slice(0, 3)} ${cleaned.slice(3)}`;
+  //   return `${cleaned.slice(0, 3)} ${cleaned.slice(3, 7)} ${cleaned.slice(7, 11)}`;
+  // };
 
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const formatted = formatPhoneNumber(e.target.value);
-    setPhone(formatted);
-    setError({ type: null, message: "" });
-  };
+  // const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const formatted = formatPhoneNumber(e.target.value);
+  //   setPhone(formatted);
+  //   setError({ type: null, message: "" });
+  // };
 
   // Request OTP
   const handleRequestOtp = async (e: React.FormEvent<HTMLFormElement>) => {

@@ -5,12 +5,10 @@ import "../landing_page.css"
 
 export default function LandingPage() {
   const navigate = useNavigate(); // Add this hook
-  const [phoneInput, setPhoneInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [focusedInput, setFocusedInput] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [isLoading] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,10 +33,6 @@ export default function LandingPage() {
   const handleGetStarted = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     navigate("/login");
-  };
-
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoneInput(e.target.value);
   };
 
   return (
